@@ -23,7 +23,7 @@ window.addEventListener(
 	'resize',
 	debounce(() => {
 		store.commit('setWindowWidth', window.innerWidth);
-	}, 200)
+	}, 200),
 );
 
 export default store;

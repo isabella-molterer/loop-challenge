@@ -1,7 +1,3 @@
-const states = {
-	hasPreloader: 'has-preloader',
-};
-
 export function showPreloader (element, options = {}) {
 	const preloader = document.createElement('div');
 	preloader.classList.add('preloader');
@@ -12,12 +8,12 @@ export function showPreloader (element, options = {}) {
 		preloader.classList.add(`preloader--${options.size}`);
 	}
 	preloader.innerHTML = generatePreloader();
-	element.classList.add(states.hasPreloader);
+	element.classList.add('has-preloader');
 	element.appendChild(preloader);
 }
 
 export function hidePreloader (element) {
-	element.classList.remove(states.hasPreloader);
+	element.classList.remove('has-preloader');
 	element.removeChild(element.querySelector('.preloader'));
 }
 
