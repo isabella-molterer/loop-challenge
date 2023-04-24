@@ -1,0 +1,121 @@
+.footer {
+	background: $color-dark;
+
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		padding: 0;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@include mq(tablet) {
+			flex-direction: row;
+
+			& > * {
+				width: 50%;
+			}
+		}
+	}
+
+	&__navigation {
+		background: $color-primary;
+		position: relative;
+		padding-left: 0;
+
+		@include mq(tablet) {
+			padding-left: 50px;
+		}
+	
+		@include mq(desktop) {
+			padding-left: 50px;
+		}
+
+		&::after,
+		&::before {
+			background: $color-primary;
+			content: "";
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+		}
+
+		&::after {
+			left: 100%;
+		}
+
+		@include mq($until: tablet) {
+			&::before {
+				right: 100%;
+			}
+		}
+	
+		&__links {
+			width: 100%;
+			margin: 100px auto;
+			max-width: 300px;
+
+			@include mq(tablet) {
+				margin: 120px auto;
+			}
+		
+			@include mq(desktop) {
+				margin: 180px auto;
+			}
+
+			&__text {
+				display: flex;
+				justify-content: space-between;
+
+				&__item {
+					display: inline-block;
+					margin-bottom: 1rem;
+					@include hover;
+				}
+			}
+
+			&__socials {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 3rem;
+
+				&__icon {
+					position: relative;
+
+					&:hover svg {
+						fill: $color-dark;
+					}
+				}
+			}
+		}
+	}
+
+	&__company {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		margin: 100px 0;
+
+		@include mq(tablet) {
+			margin: 120px 50px 120px 0;
+			text-align: left;
+		}
+	
+		@include mq(desktop) {
+			margin: 180px 50px 180px 0;
+		}
+
+		&__logo__image {
+			width: 100%;
+			max-width: 420px;
+		}
+
+		&__copyright {
+			margin-top: 3rem;
+		}
+	}
+}

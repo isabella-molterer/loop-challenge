@@ -62,13 +62,13 @@ p {
 
 @mixin h3 {
 	@include headline-styles;
-	font-size: 28px;
+	font-size: 16px;
 	line-height: 1.2;
 	@include mq(tablet) {
-		font-size: 32px;
+		font-size: 20px;
 	}
 	@include mq(desktop) {
-		font-size: 36px;
+		font-size: 24px;
 	}
 }
 

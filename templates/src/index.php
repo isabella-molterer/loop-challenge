@@ -134,4 +134,98 @@ include($root_path . '/partials/head.php');
 	</div>
 </section>
 
+<section class="crew crew__gallery">
+	<crew-gallery data-component='{"factory": "vue"}'></crew-gallery>
+</section>
+
+<footer class="footer">
+	<div class="footer__inner container">
+		<div class="footer__company">
+			<!-- Logo -->
+			<a href="#" class="footer__company__logo">
+				<img class="footer__company__logo__image" src="/assets/images/logo.svg" alt="Segelteam">
+			</a>
+			<p class="footer__company__copyright color-light">&copy; 2021. Segel-Team. Alle Rechte vorbehalten</p>
+		</div>
+
+		<div class="footer__navigation">
+			<div class="footer__navigation__links">
+				<div class="footer__navigation__links__text">
+					<ul>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">About us</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Gallery</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Crew</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Contact</a>
+						</li>						
+					</ul>
+					<ul>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Impressum</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Datenschutz</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Rechtliches</a>
+						</li>
+						<li>
+							<a class="footer__navigation__links__text__item color-light" href="#">Copyright</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="footer__navigation__links__socials">
+					<li>
+						<a class="footer__navigation__links__socials__icon color-light" href="#">
+							<?php echo generate_component_icon([
+								'name' => 'facebook',
+								'type' => 'inline',
+								'class' => 'icon__md icon__facebook',
+								'tag' => 'div',
+							]) ?>
+						</a>
+					</li>
+					<li>
+						<a class="footer__navigation__links__socials__icon color-light" href="#">
+							<?php echo generate_component_icon([
+								'name' => 'twitter',
+								'type' => 'inline',
+								'class' => 'icon__md icon__twitter',
+								'tag' => 'div',
+							]) ?>
+						</a>
+					</li>
+					<li>
+						<a class="footer__navigation__links__socials__icon color-light" href="#">
+							<?php echo generate_component_icon([
+								'name' => 'instagram',
+								'type' => 'inline',
+								'class' => 'icon__md icon__instagram',
+								'tag' => 'div',
+							]) ?>
+						</a>
+					</li>
+					<li>
+						<a class="footer__navigation__links__socials__icon color-light" href="#">
+							<?php echo generate_component_icon([
+								'name' => 'youtube',
+								'type' => 'inline',
+								'class' => 'icon__md icon__youtube',
+								'tag' => 'div',
+							]) ?>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
 <?php include($root_path . '/partials/foot.php'); ?>  
